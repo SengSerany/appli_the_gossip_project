@@ -1,0 +1,11 @@
+<h1>Bienvenue sur The Gossip Project!</h1>
+<p>Voici les gossips:</p>
+
+	<% n = 1 %>
+<p><% @gossips.each do |gossip|%>
+	<% @id = n %>
+	<a <%= link_to "Gossip n°#{n}: #{gossip[:title]}", welcome_path(@id) %> </a> <br />
+	<% n = n + 1 %>
+	<% end %> <p>
+
+		<p>

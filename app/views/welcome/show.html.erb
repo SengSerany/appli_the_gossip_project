@@ -1,0 +1,4 @@
+<h1><%= @gossips[((params[:id]).to_i - 1)].title %> !</h1>
+
+<p> Auteur : <a <%= link_to "#{@gossips[((params[:id]).to_i - 1)].user.first_name}", profil_path(@gossips[((params[:id]).to_i - 1)].user.first_name) %> </a></p>
+<p>Ici c'est notre super site de potins, il est chouette, non ?</p>
