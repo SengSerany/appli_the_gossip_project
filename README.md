@@ -1,24 +1,11 @@
-# README
+Application The gossip project a.k.a "TGP" pour les intimes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+pour lancer l'appication,
+  télécharger le dossier rails:
+  https://github.com/SengSerany/appli_the_gossip_project.git
+  
+  puis sur le terminal:
+    '''bundle install
+      rails db:migrate
+      rails serveur'''
+    
