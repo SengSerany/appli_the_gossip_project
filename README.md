@@ -45,13 +45,20 @@ pour lancer l'appication,
               2 - Dans le ficher 'config/routes.rb' je créé un lien vers le controleur et la view :
                 get 'welcome/:id', to:'welcome#show', as: 'welcome'
               ':id' étant la variable dans l'URL, 'welcome' est le nom que j'ai établi pour le chemin vers le controller:view
-              3 - Dans la view 'show', j'affiche le nom: <h1><%= @gossips[((params[:id]).to_i - 1)].title %> !</h1>
+              3 - Dans la view 'show', j'affiche le nom: '<h1><%= @gossips[((params[:id]).to_i - 1)].title %> !</h1>'
   
    - 2.5 /
               1 - Créé le fichier 'get '/', to: 'welcome#index', as: 'index' qui sera ma "Homepage"
               2 - Dans le fichier 'config/routes.rb' je designe 'index' comme "Homepage":
                 get '/', to: 'welcome#index', as: 'index'
-                
+              3 - Je lie ma table User qui est dans BDD avec '@Gossip = gossip.all' dans la méthode index dans le fichier:
+                'app/controllers/welcome.rb'
+              4 - j'affiche chaque gossip, son auteur et son titre:
+                  ' <% n = 1 %>
+                    <p><% @gossips.each do |gossip|%>	
+                    <% @id = n %>
+                    <a <%= link_to "Gossip n°#{n}", welcome_path(@id) %> </a>
+                    <a <%= link_to "De #{gossip.user.first_name}: #{gossip[:title]}", welcome_path(@id) %> </a> '
 '
                     
                     
