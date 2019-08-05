@@ -5,7 +5,10 @@ pour lancer l'appication,
   https://github.com/SengSerany/appli_the_gossip_project.git
   
   puis sur le terminal:
-    '''bundle install
-      rails db:migrate
-      rails serveur'''
+    - bundle install
+    - rails db:migrate
+    - rails serveur
+    
+    Puis sur un navigateur internet:
+      http://localhost:3000/
     
