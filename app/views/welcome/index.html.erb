@@ -12,7 +12,7 @@
   </div>
   <div class="card-body">
 
-       <h5 class="card-title"><a <%= link_to "Gossip n°#{n}", welcome_path(@id) %> </a></h5>
+    <h5 class="card-title"><a <%= link_to "Gossip n°#{n}", welcome_path(@id) %> </a></h5>
     <p class="card-text"><a <%= link_to "De #{gossip.user.first_name}: 
     #{gossip[:title]}", welcome_path(@id) %> </a></p>
 
